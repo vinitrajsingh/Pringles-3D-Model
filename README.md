@@ -1,6 +1,6 @@
 # CRISP
 
-A small Three.js web app that puts three crisp cans into a browser viewer: BBQ, French Onion, and Paprika. Built for the 3D Applications module, University of Sussex (2025/26).
+A small Three.js web app that puts three crisp cans into a browser viewer: BBQ, French Onion, and Paprika. Built for the 3D Applications module.
 
 ## Run
 
@@ -22,8 +22,6 @@ Opening `index.html` directly with `file://` will not work. ES module imports ne
 | --- | --- |
 | `index.html` | Gallery. 3D viewer with flavour selector, view toggles, lighting and camera presets. |
 | `about.html` | Project description, model notes, statement of originality, references. |
-| `sitemap.html` | Full site map. |
-| `submission.html` | Submission metadata and declaration. |
 
 ## Stack
 
@@ -60,8 +58,6 @@ The can base meshes were sourced from Sketchfab and adapted in Blender. New flav
 .
 ├── index.html
 ├── about.html
-├── sitemap.html
-├── submission.html
 ├── README.md
 ├── css/
 │   └── style.css
