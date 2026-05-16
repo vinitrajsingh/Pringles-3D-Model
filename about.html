@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - CRISP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">CRISP</span>
+      <span class="logo-strap">Three cans, three flavours</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Gallery</a>
+      <a href="about.html" class="is-active">About</a>
+      <a href="sitemap.html">Site Map</a>
+      <a href="submission.html">Submission</a>
+      <a href="https://github.com/n70y/3DModel" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="prose">
+    <article>
+      <p class="eyebrow">About</p>
+      <h1>Three crisp cans, presented in 3D.</h1>
+      <p class="lede">
+        CRISP is a small web app that puts three flavoured crisp cans into a
+        browser-based 3D viewer. You can rotate them, change the lighting,
+        switch the camera angle, and inspect the wireframe.
+      </p>
+
+      <h2>The app</h2>
+      <p>
+        The viewer is built with Three.js. The three cans are loaded as
+        <code>.glb</code> files exported from Blender. A GLTF loader pulls
+        each model into the scene, an environment map adds soft reflections,
+        and the user controls drive lights and camera presets.
+      </p>
+      <p>
+        Orbit controls handle drag, zoom and pan. GSAP animates the camera
+        between preset angles. The Spin button rotates the active model a
+        full turn so you can quickly see the artwork from every side.
+      </p>
+
+      <h2>The models</h2>
+      <dl class="model-list">
+        <dt>BBQ</dt><dd>Smoky barbecue. Deep magenta can with charred edges and a hint of sweet spice.</dd>
+        <dt>French Onion</dt><dd>Creamy french onion dip. Fresh green can with a savoury, herby finish.</dd>
+        <dt>Paprika</dt><dd>Bright paprika. Warm orange can with a peppery, smoked finish.</dd>
+      </dl>
+
+
+      <h2>Controls</h2>
+      <ul class="refs">
+        <li>Drag to rotate. Scroll to zoom. Right-click drag to pan.</li>
+        <li>Flavour buttons switch the active can.</li>
+        <li>Wireframe toggles the mesh view. Auto-rotate keeps the can turning. Spin plays a one-shot full turn.</li>
+        <li>Ambient, Key and Rim light each toggle a separate light group.</li>
+        <li>Camera presets jump to Front, Top, Side or Reset, eased with GSAP.</li>
+      </ul>
+
+      <h2>Statement of originality</h2>
+      <p>
+        The brand CRISP, the page layout, the copy, the CSS, the JavaScript
+        and the 3D scene setup were produced by the author for this
+        assignment. The can base meshes were sourced from Sketchfab under
+        their respective licences, then re-textured and re-tuned in Blender.
+        No assets or code from the lab brand exercises were carried into
+        this submission.
+      </p>
+
+      <h2>References</h2>
+      <ul class="refs">
+        <li>Three.js documentation. <a href="https://threejs.org/docs/" target="_blank" rel="noopener">threejs.org/docs</a></li>
+        <li>Three.js GLTFLoader. <a href="https://threejs.org/docs/#examples/en/loaders/GLTFLoader" target="_blank" rel="noopener">threejs.org GLTFLoader</a></li>
+        <li>Three.js examples. <a href="https://threejs.org/examples/" target="_blank" rel="noopener">threejs.org/examples</a></li>
+        <li>GSAP documentation. <a href="https://gsap.com/docs/v3/" target="_blank" rel="noopener">gsap.com/docs/v3</a></li>
+        <li>MDN Web Docs. <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">developer.mozilla.org</a></li>
+        <li>Sketchfab. Base meshes used as the starting point for each can. <a href="https://sketchfab.com/" target="_blank" rel="noopener">sketchfab.com</a></li>
+        <li>Blender. <a href="https://www.blender.org/" target="_blank" rel="noopener">blender.org</a></li>
+      </ul>
+
+      <h2>Stack</h2>
+      <ul class="refs">
+        <li>HTML5, CSS3, ECMAScript modules. No build step.</li>
+        <li>Three.js r160 via CDN import map.</li>
+        <li>GSAP 3 for camera transitions and the Spin animation.</li>
+        <li>Playfair Display and Inter via Google Fonts.</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 CRISP</span>
+    <span class="dot">&middot;</span>
+    <span>3D Applications - University of Sussex</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRISP - Three cans, three flavours</title>
+  <meta name="description" content="CRISP. A 3D viewer for three crisp cans: BBQ, French Onion, and Paprika." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">CRISP</span>
+      <span class="logo-strap">Three cans, three flavours</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" class="is-active">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="sitemap.html">Site Map</a>
+      <a href="submission.html">Submission</a>
+      <a href="https://github.com/n70y/3DModel" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="viewer" aria-label="3D model viewer">
+      <div id="canvas-host" class="canvas-host"></div>
+      <div id="loading" class="loading">Loading model...</div>
+      <p class="viewer-hint">Drag to rotate. Scroll to zoom. Right-click to pan.</p>
+    </section>
+
+    <aside class="panel">
+      <p class="eyebrow">No. <span id="model-index">01</span> / 03</p>
+      <h1 id="model-name" class="model-name">BBQ</h1>
+      <p id="model-desc" class="model-desc">Smoky barbecue. The deep magenta can with charred edges and a hint of sweet spice.</p>
+
+      <section class="control-group">
+        <h2 class="control-title">Flavour</h2>
+        <div class="model-select" role="tablist">
+          <button class="select-btn is-active" data-model="bbq" role="tab">BBQ</button>
+          <button class="select-btn" data-model="french" role="tab">French</button>
+          <button class="select-btn" data-model="paprika" role="tab">Paprika</button>
+        </div>
+      </section>
+
+      <section class="control-group">
+        <h2 class="control-title">View</h2>
+        <div class="control-row">
+          <button id="btn-wireframe" class="ctrl-btn">Wireframe</button>
+          <button id="btn-rotate" class="ctrl-btn">Auto-rotate</button>
+          <button id="btn-spin" class="ctrl-btn">Spin</button>
+        </div>
+      </section>
+
+      <section class="control-group">
+        <h2 class="control-title">Light</h2>
+        <div class="control-row">
+          <button id="btn-ambient" class="ctrl-btn">Ambient</button>
+          <button id="btn-key" class="ctrl-btn">Key light</button>
+          <button id="btn-rim" class="ctrl-btn">Rim light</button>
+        </div>
+      </section>
+
+      <section class="control-group">
+        <h2 class="control-title">Camera</h2>
+        <div class="control-row">
+          <button class="ctrl-btn" data-camera="front">Front</button>
+          <button class="ctrl-btn" data-camera="top">Top</button>
+          <button class="ctrl-btn" data-camera="side">Side</button>
+          <button class="ctrl-btn" data-camera="reset">Reset</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 CRISP</span>
+    <span class="dot">&middot;</span>
+    <span>3D Applications - University of Sussex</span>
+  </footer>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
